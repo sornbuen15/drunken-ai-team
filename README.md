@@ -10,6 +10,18 @@ Skills enforce domain standards in-context via slash commands. Domain specialist
 
 ---
 
+## Why This Exists
+
+I'm a computer engineer, but I don't feel confident I'm good enough — and I don't have much time to develop my skills the way I'd like to.
+
+I built this toolkit to learn the fundamentals properly and try building an agent system from my own perspective. It's part study, part experiment.
+
+The skills were drafted by me, then **reviewed and improved with AI assistance** — I used Claude to audit the reasoning, tighten the constraints, and sharpen the output format of each `SKILL.md`.
+
+I'm sharing this because I wanted a review. I'm not sure I'm still where I need to be as a software engineer, and this project is my honest attempt to find out.
+
+---
+
 ## Mental Model: Skills vs Agents
 
 | | Skills | Agents |
