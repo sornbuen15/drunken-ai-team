@@ -10,8 +10,8 @@ This directory walks through a complete project lifecycle using the AI Team Tool
 
 | You are... | Start here |
 |---|---|
-| New to the toolkit — want to see what it produces | Follow the stages in order below |
-| About to start a real project | Copy `00-setup/` templates and fill them in |
+| New to the toolkit — want to try it on your own project | Read [`GETTING_STARTED.md`](../GETTING_STARTED.md) first, then use these examples as reference |
+| Curious what the output looks like before running anything | Follow the stages in order below |
 | Writing a new skill or agent | Go to `contributing/` |
 
 ---

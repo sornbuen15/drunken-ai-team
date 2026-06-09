@@ -570,6 +570,12 @@ While this toolkit provides a highly structured agentic workflow, there are prac
 
 ---
 
+## Getting Started
+
+New here? Read **[`GETTING_STARTED.md`](./GETTING_STARTED.md)** — a step-by-step guide for using the toolkit on your own project, from setup through your first completed task.
+
+---
+
 ## Examples & Walkthrough
 
 A self-contained example lives in [`examples/`](./examples/). It walks through the full project lifecycle using a fictional app called **TaskFlow** — from blank templates to a running kanban board — with every major skill firing in sequence.
@@ -673,5 +679,6 @@ ai-team-toolkit/
 │       ├── project-hygiene/
 │       └── test-report-generator/
 ├── CLAUDE.md                      # Master instructions for this repo
+├── GETTING_STARTED.md             # Step-by-step user guide for your first project
 └── README.md                      # This file
 ```
