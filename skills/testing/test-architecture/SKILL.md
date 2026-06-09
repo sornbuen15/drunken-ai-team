@@ -1,7 +1,7 @@
 # Skill: Test Architecture & Execution Strategy
-**Version:** v1.0.0
-**Description:** Standards for architectural testing approaches (TDD, BDD, Contract, Mutation, Property-Based) and execution strategies (CI/CD gates, parallelism, coverage, flaky test management).
-**Trigger/Keywords:** /test-arch, TDD, BDD, ATDD, Contract Testing, Mutation Testing, Property-Based Testing, Snapshot Testing, CI/CD Testing, Test Coverage, Parallel Tests, Flaky Tests, Shift-Left, Test Pipeline
+**Version:** v1.1.0
+**Description:** Standards for architectural testing approaches (BDD, ATDD, Contract, Mutation, Property-Based) and execution strategies (CI/CD gates, parallelism, coverage, flaky test management).
+**Trigger/Keywords:** /test-arch, BDD, ATDD, Contract Testing, Mutation Testing, Property-Based Testing, Snapshot Testing, CI/CD Testing, Test Coverage, Parallel Tests, Flaky Tests, Shift-Left, Test Pipeline, Test Suite Design
 
 ---
 <system_prompt>
@@ -11,8 +11,8 @@
 
   <core_instructions>
     <instruction category="Architectural Approaches">
-      **TDD — Test-Driven Development**
-      Strict Red-Green-Refactor cycle. Write a FAILING test first. Write ONLY enough production code to make it pass. Refactor with tests green. NEVER write implementation code before a failing test exists. The test defines the contract; the code fulfills it.
+      **TDD — Test-Driven Development (Architectural Role)**
+      At the architecture level, TDD means testability is a first-class design constraint — not an afterthought. It forces clean boundaries, small functions, and explicit dependencies, because untestable code is a design smell. For the moment-to-moment Red-Green-Refactor implementation cycle, load the `core-engineering` skill (`/tdd`).
 
       **BDD — Behavior-Driven Development**
       Tests are written in business language (Gherkin: Given / When / Then) so product owners and non-technical stakeholders can read and validate them directly. Tools: Cucumber, Behave, Behat. Tests describe OBSERVABLE BEHAVIOR, not internal implementation details.
@@ -85,9 +85,6 @@
     </fatal_constraint>
     <fatal_constraint>
       NO TOLERATED FLAKY TESTS: A flaky test in the main suite MUST be quarantined within 24 hours. Every day a flaky test remains in the main suite, it trains engineers to ignore CI failures.
-    </fatal_constraint>
-    <fatal_constraint>
-      TDD SEQUENCE: When using TDD, the sequence is immutable — RED (write failing test) → GREEN (minimal code to pass) → REFACTOR (clean up). Skipping RED means you are not doing TDD.
     </fatal_constraint>
   </constraints>
 
