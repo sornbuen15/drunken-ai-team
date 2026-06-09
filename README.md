@@ -1,5 +1,7 @@
 # AI Team Toolkit
 
+> **🚨 EXPERIMENTAL WARNING:** This project is currently an experimental concept and a work-in-progress (trial and error). **Do NOT use this in a production environment**, as it may cause unexpected errors, delete files, or lead to unintended consequences.
+
 > An AI-powered development team toolkit using Claude — skills, agents, and workflows that assemble a disciplined engineering squad for any software project.
 
 A collection of **26 skills**, **2 domain specialists**, and an **8-agent engineering squad** that transforms Claude Code into a structured, team-based engineering system.
@@ -540,6 +542,19 @@ flowchart TD
 | `/product` | product-midset | Feature ROI, FinOps, build-vs-buy |
 | `/telemetry` | business-telemetry | Adding event tracking |
 | `/playbook` | standard-playbook-generator | Generate engineering documentation |
+
+---
+
+## ⚠️ Real-World Considerations & Known Limitations
+
+While this toolkit provides a highly structured agentic workflow, there are practical trade-offs to consider before adopting it for daily production use:
+
+1. **Token Cost & Latency:** Orchestrating multiple agents, passing large context files (`PROJECT_BRIEF.md`, `DOMAIN_BRIEF.md`), and dynamically loading skills consumes a significant amount of tokens. Each turn can be expensive and may take several minutes to execute due to the context size.
+2. **File-Based Kanban Fragility:** The current kanban system (`todo/`, `in-progress/`, `done/`) relies on the AI reading and moving `.md` files via bash commands. In long conversations, the AI might occasionally lose track of state, overwrite files incorrectly, or hallucinate the board's status.
+3. **Process Heavy for Small Tasks:** The strict three-tier architecture and engineering discipline are designed for complex features. Using the full squad workflow for a minor CSS tweak or simple hotfix is overkill and will create unnecessary bottlenecks.
+4. **Agent Orchestration Loops:** Autonomous agent interactions (e.g., `qa-engineer` rejects code -> `fullstack-engineer` fixes -> `qa-engineer` rejects again) can potentially get stuck in a retry cycle, burning tokens. It is highly recommended to monitor execution and enforce a "Human-in-the-loop" intervention if tests fail repeatedly.
+
+*Note: Future updates may explore Function Calling / Tools for more robust Kanban state management and "Fast-Track" modes for smaller engineering tasks.*
 
 ---
 
