@@ -309,8 +309,7 @@ bash scripts/sync_skills.sh
 ```
 my-claude-skill/
 ├── scripts/
-│   ├── sync_skills.sh          # Deploy skills to ~/.claude/skills/
-│   └── link-skills.sh          # Alternative: symlink instead of copy
+│   └── sync_skills.sh          # Deploy skills to ~/.claude/skills/
 ├── skills/
 │   ├── architecture/
 │   │   └── system-design-rules/
